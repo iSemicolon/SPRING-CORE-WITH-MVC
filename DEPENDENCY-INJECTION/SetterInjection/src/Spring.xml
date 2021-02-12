@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- DEPENDENCY -->
+<bean id="eng" class="org.kol.SetterInjectionApp.Engine">
+
+<property name="engine_number" value="1097"></property>
+<property name="engine_type" value="Petrol"></property>
+<property name="engine_model" value="X15 Productivity Series "></property>
+</bean>
+
+<!-- Implementaion Logic for BMW -->
+
+<bean id="bmw" class="org.kol.SetterInjectionApp.BmwImpl">
+<property name="car_number" value="250"></property>
+<property name="color" value="Blue"></property>
+<property name="wheels">
+<list>
+<value>Wheel1</value>
+<value>Wheel2</value>
+<value>Wheel3</value>
+<value>Wheel4</value>
+</list> 
+</property>
+<property name="engine" ref="eng"></property>
+</bean>
+
+<!-- Implementaion Logic for AUDI -->
+<bean id="audi" class="org.kol.SetterInjectionApp.AudiImpl"></bean>
+
+</beans>
+ 

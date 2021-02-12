@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- DEPENDENCY -->
+<bean id="eng" class="org.kol.ConstructorApp.Engine">
+
+<constructor-arg name="engine_number" value="222"></constructor-arg>
+<constructor-arg name="engine_type" value="Diesel"></constructor-arg>
+<constructor-arg name="engine_model" value="Duke"></constructor-arg>
+</bean>
+
+<!-- Implementaion Logic for BMW -->
+
+<bean id="bmw" class="org.kol.ConstructorApp.BmwImpl">
+
+<constructor-arg name="car_number" value="111"></constructor-arg>
+<constructor-arg name="color" value="Red"></constructor-arg>
+
+<constructor-arg name="wheels">
+<list>
+<value>Wheel1</value>
+<value>Wheel2</value>
+<value>Wheel3</value>
+<value>Wheel4</value>
+</list> 
+</constructor-arg>
+<constructor-arg name="engine" ref="eng"></constructor-arg>
+</bean>
+
+<!-- Implementaion Logic for AUDI -->
+<bean id="audi" class="org.kol.ConstructorApp.AudiImpl"></bean>
+
+</beans>
+ 
