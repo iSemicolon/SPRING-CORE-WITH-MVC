@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Controller Class -->
+<bean id="flk" class="org.kol.ByNameApp.FlipkartController" autowire="byName">
+
+
+</bean>
+
+<!-- Dependency -->
+
+<bean id="ec" class="org.kol.ByNameApp.Electronics"></bean>
+<bean id="fc" class="org.kol.ByNameApp.Furniture"></bean>
+<bean id="cs" class="org.kol.ByNameApp.Cosmetics"></bean>
+
+
+
+
+
+</beans>
+ 
